@@ -139,10 +139,8 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <ul><li>الصورة = <b>raster</b> = array of picture elements (pixels) متخزنة في الـ <b>frame buffer</b>.</li>
 <li>الـ frame buffer جزء من الميموري بيخزن قيمة كل pixel.</li>
 <li><b>Depth (precision)</b> = عدد البتات لكل pixel.</li></ul>
-<div class="key">عدد الألوان = <code>2^(bits per pixel)</code> • حجم الـ buffer = <code>width × height × bits ÷ 8</code> (bytes)</div>
+<div class="key">عدد الألوان = <code>2^(bits per pixel)</code></div>
 <div class="wrap"><table><tr><th>Bits/pixel</th><th>1</th><th>4</th><th>8</th><th>15</th><th>16</th><th>24</th></tr><tr><td>Colors</td><td>2</td><td>16</td><td>256</td><td>32,768</td><td>65,536</td><td>16,777,216</td></tr></table></div>
-<p class="tip">الشريحة كاتبة 16,772,216 للـ 24-bit وده غلط مطبعي، الصح 2²⁴ = 16,777,216.</p>
-<p><b>مثال محلول:</b> شاشة 1280×1024 و 24 bit/pixel. عدد البيكسلات = 1,310,720. الحجم = 1,310,720 × 3 bytes = 3,932,160 bytes = <b>3.75 MB</b>.</p>
 <p><b>مثال تاني:</b> 1024×768 و 8 bit = 786,432 byte = <b>768 KB</b>.</p></div></details>
 
 <details><summary>1.4 أجهزة الإدخال والإخراج (CRT)</summary><div>
