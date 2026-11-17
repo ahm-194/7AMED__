@@ -291,7 +291,7 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <ul><li>الدايرة = مجموعة النقاط على بعد ثابت <b>r</b> من المركز (xc, yc).</li>
 <li><b>Cartesian (1):</b> <code>(x−xc)² + (y−yc)² = r²</code></li>
 <li><b>Parametric (2):</b> <code>x = xc + r·cosθ</code> ، <code>y = yc + r·sinθ</code></li>
-<li>معظم حزم الجرافيكس فيها إجراء لرسم دوائر أو أقواس، وأحيانًا إجراء واحد للدايرة والـ ellipse.</li></ul></div></details>
+<li>معظم حزم الجرافيكس فيها إجراء لرسم دوائر أو أقواس.</li></ul></div></details>
 
 <details><summary>4.2 ليه الطرق المباشرة مش كويسة؟</summary><div>
 <ul><li>الـ Cartesian فيها <b>ضرب وجذر تربيعي</b>. الـ parametric فيها <b>ضرب و trigonometry</b>. كتير حسابات في كل خطوة.</li>
@@ -305,7 +305,6 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <div class="key en"><code>(x,y) (y,x) (y,−x) (x,−y) (−x,−y) (−y,−x) (−y,x) (−x,y)</code></div>
 <p>يعني النقطة + <b>7 نقاط</b> تانية. بيقلل الحساب للـ 1/8.</p>
 <p><b>لو المركز مش (0,0):</b> احسب كأنه (0,0) وبعدين زوّد xc على كل x و yc على كل y.</p>
-<p><b>الـ Ellipse (ظهر في MCQ):</b> الـ standard ellipse محاوره موازية لمحاور الإحداثيات، وبنستغل الـ symmetry علشان نقلل الحسابات (مفتاح الميد: Quadrant symmetry).</p></div></details>
 
 <details><summary>4.4 فكرة Bresenham/Midpoint للدايرة</summary><div>
 <ul><li>بنعمل decision parameters بنفس فكرة خط Bresenham علشان نلاقي أقرب بيكسل للمحيط في كل خطوة.</li>
