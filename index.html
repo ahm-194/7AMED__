@@ -291,7 +291,7 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <ul><li>الدايرة = مجموعة النقاط على بعد ثابت <b>r</b> من المركز (xc, yc).</li>
 <li><b>Cartesian (1):</b> <code>(x−xc)² + (y−yc)² = r²</code></li>
 <li><b>Parametric (2):</b> <code>x = xc + r·cosθ</code> ، <code>y = yc + r·sinθ</code></li>
-<li>معظم حزم الجرافيكس فيها إجراء لرسم دوائر أو أقواس، وأحيانًا إجراء واحد للدايرة والـ ellipse.</li></ul></div></details>
+<li>معظم حزم الجرافيكس فيها إجراء لرسم دوائر أو أقواس.</li></ul></div></details>
 
 <details><summary>4.2 ليه الطرق المباشرة مش كويسة؟</summary><div>
 <ul><li>الـ Cartesian فيها <b>ضرب وجذر تربيعي</b>. الـ parametric فيها <b>ضرب و trigonometry</b>. كتير حسابات في كل خطوة.</li>
@@ -305,7 +305,7 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <div class="key en"><code>(x,y) (y,x) (y,−x) (x,−y) (−x,−y) (−y,−x) (−y,x) (−x,y)</code></div>
 <p>يعني النقطة + <b>7 نقاط</b> تانية. بيقلل الحساب للـ 1/8.</p>
 <p><b>لو المركز مش (0,0):</b> احسب كأنه (0,0) وبعدين زوّد xc على كل x و yc على كل y.</p>
-<p><b>الـ Ellipse (ظهر في MCQ):</b> الـ standard ellipse محاوره موازية لمحاور الإحداثيات، وبنستغل الـ symmetry علشان نقلل الحسابات (مفتاح الميد: Quadrant symmetry).</p></div></details>
+</div></details>
 
 <details><summary>4.4 فكرة Bresenham/Midpoint للدايرة</summary><div>
 <ul><li>بنعمل decision parameters بنفس فكرة خط Bresenham علشان نلاقي أقرب بيكسل للمحيط في كل خطوة.</li>
@@ -348,7 +348,7 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 </section>
 
 <section id="s2">
-<h2>حل ميد 2026 بنفسك <span class="pill">15 درجة</span></h2>
+<h2>حل ميد 2026 بنفسك <span class="pill">11 درجة</span></h2>
 <div class="tbar" id="tbar"><div class="tl"><span id="tm">60:00</span><span id="tst" class="sub">جاهز. اضغط ابدأ أول ما تبدأ تحل.</span>
 <span><button class="btn" id="tgo">▶ ابدأ</button> <button class="btn g" id="trs">↺ من الأول</button> <button class="btn g" id="tsub">✔ سلّم وصحح</button></span></div><div class="prog"><div id="tfill"></div></div></div>
 <p>حل الأول وبعدين <b>تحقق</b> لكل سؤال، أو <b>سلّم وصحح</b> علشان تصحح الكل مرة واحدة. الحل النموذجي في آخر الصفحة.</p>
@@ -360,10 +360,9 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <p class="en"><b>(2)</b> ارسم: اضغط على الخانات اللي هتلونها.</p>
 <div class="pg" id="q1g"></div>
 <button class="btn" id="q1gc">تحقق من الرسم</button><div class="msg" id="q1gm"></div></div>
-<div class="card"><h3>Q2 — عرّف (4 درجات)</h3><div id="q2"></div></div>
-<div class="card"><h3>Q3 — اختار الإجابة الصحيحة (5 درجات)</h3><div class="score" id="e3s"></div><div id="e3"></div></div>
+<div class="card"><h3>Q2 — اختار الإجابة الصحيحة (5 درجات)</h3><div class="score" id="e3s"></div><div id="e3"></div></div>
 <div class="msg" id="fin"></div>
-<details><summary>الحل النموذجي كامل (Q1 + Q2 + Q3)</summary><div>
+<details><summary>الحل النموذجي كامل (Q1 + Q2)</summary><div>
 <h3>Q1</h3>
 <div class="wrap"><table><tr><th>k</th><th>p<sub>k</sub></th><th>(x<sub>k+1</sub>, y<sub>k+1</sub>)</th><th>2x<sub>k+1</sub></th><th>2y<sub>k+1</sub></th></tr>
 <tr><td>0</td><td>−7</td><td>(1,8)</td><td>2</td><td>16</td></tr><tr><td>1</td><td>−4</td><td>(2,8)</td><td>4</td><td>16</td></tr>
@@ -372,13 +371,8 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <p>الدكتور حط (6,5) كصف أخير (x&gt;y فبيوقف). نقاط الـ octant: <b>(0,8) (1,8) (2,8) (3,7) (4,7) (5,6)</b>.</p>
 <canvas id="cv8" width="360" height="300" aria-label="رسم الـ octant لـ r=8"></canvas>
 <h3>Q2</h3>
-<ul class="en"><li><b>Scan conversion:</b> converting geometric data described in vector form into a set of pixels.</li>
-<li><b>Geometric primitives:</b> the low-level objects (atomic entities) the system can display: points, line segments, polygons, pixels, text, curves and surfaces.</li>
-<li><b>Triangulation:</b> dividing a polygon into a set of triangles using its vertices.</li>
-<li><b>Standard position:</b> object axes parallel to the X and Y axes, in default position/orientation before any transformation.</li></ul>
-<h3>Q3</h3>
-<div class="wrap"><table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
-<tr><td>c</td><td>b</td><td>a</td><td>b</td><td>b</td><td>a</td><td>c</td><td>d</td><td>c</td><td>d</td></tr></table></div></div></details>
+<div class="wrap"><table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+<tr><td>c</td><td>b</td><td>a</td><td>b</td><td>b</td><td>c</td><td>c</td><td>d</td></tr></table></div></div></details>
 </section>
 
 <section id="s3">
@@ -436,22 +430,18 @@ var M=[[2,"Mid 2026 – The simplest geometric primitive is ____",["Circle","Lin
 [3,"Mid 2026 – In Bresenham's line algorithm, the initial decision parameter is ____",["2Δy − Δx","Δy − 2Δx","Δx − Δy","2Δx − Δy"],0,"p0 = 2Δy − Δx."],
 [2,"Mid 2026 – Sphere approximation with quadrilaterals means using many small ____ patches",["triangles","quads","circles","lines"],1,"quadrilaterals = quads."],
 [3,"Mid 2026 – If p_k < 0, what is p_k+1?",["p_k + 2Δx","p_k + 2Δy","p_k + Δy","p_k + Δx"],1,"p<0 → p + 2Δy."],
-[4,"Mid 2026 – Ellipse drawing algorithms use symmetry to ____",["Reduce calculations","Increase complexity","Change shape","Remove pixel"],0,"الـ symmetry بيقلل الحسابات."],
 [2,"Mid 2026 – Characters are rectangles of bits called ____",["Pixels","Vectors","Bit blocks","Polygons"],2,"Raster text = bit blocks."],
-[4,"Mid 2026 – An ellipse can be drawn using Bresenham by taking advantage of ____ symmetry",["Diagonal","Axis","Octant","Quadrant"],3,"الإجابة المعتمدة في مفتاح الدكتور: Quadrant."],
 [3,"Mid 2026 – If p_k ≥ 0, the next point is?",["(x_k+1, y_k)","(x_k, y_k+1)","(x_k+1, y_k+1)","(x_k, y_k)"],2,"p≥0 → x و y الاتنين بيزيدوا."],
 [3,"Mid 2026 – The main advantage of Bresenham's algorithm is ____",["Floating-point","Rounding errors","Addition","Integer calculations"],3,"Integer only."]];
 var X=[
 [1,"Which is NOT a major application area of computer graphics?",["Display of information","Design","Compilers","Simulation and animation"],2,"الأربعة: Display, Design, Simulation & animation, User interfaces."],
 [1,"A frame buffer uses 8 bits per pixel. How many colors?",["8","64","256","65,536"],2,"2^8 = 256."],
-[1,"Frame-buffer memory for 1280×1024 at 24 bits/pixel?",["1.25 MB","3.75 MB","7.5 MB","30 MB"],1,"1,310,720 × 3 bytes = 3.75 MB."],
 [1,"Which is one of the six major elements of a graphics system?",["Frame buffer","Compiler","Scanner","Printer driver"],0,"Input devices, CPU, GPU, Memory, Frame buffer, Output devices."],
 [1,"The pinhole camera produces an image that is…",["inverted","magnified","only colored","upright"],0,"الصورة مقلوبة."],
 [1,"Cones in the human eye work in ____ light and give ____",["low – gray vision","high – color vision","low – color vision","high – gray vision"],1,"Cones = ضوء عالي + ألوان. Rods = ضوء قليل."],
 [1,"Visible light wavelengths are about",["350–780 nm","100–200 nm","900–1200 nm","1–10 mm"],0,"350–780 nm."],
 [1,"A design problem with many possible solutions is",["overdetermined","underdetermined","invalid","simple"],1,"Underdetermined = حلول كتير. Overdetermined = مفيش حل."],
 [1,"The depth of the frame buffer is…",["number of pixels","bits per pixel","screen size","refresh rate"],1,"Depth = bits per pixel."],
-[1,"Frame buffer size for 1024×768 at 8 bits/pixel?",["768 KB","1.5 MB","3 MB","6 MB"],0,"1024×768×1 byte = 786,432 B = 768 KB."],
 [2,"Primitive functions define…",["How objects look","Low-level objects like points and lines","Window handling","Camera position"],1,"Primitives = the what."],
 [2,"Attribute functions determine…",["What is displayed","How objects are displayed","Input devices","Errors"],1,"Attributes = the how."],
 [2,"Why are triangles the preferred polygon primitive?",["Always simple, flat and convex","They are the biggest","They are non-planar","They need no vertices"],0,"فسريعة في الـ rendering."],
@@ -487,9 +477,6 @@ document.getElementById("q1s").onclick=function(){t1.querySelectorAll("input").f
 var pg=document.getElementById("q1g"),ph="";for(var y=8;y>=3;y--){ph+="<span>"+y+"</span>";for(var x=0;x<7;x++)ph+='<button data-x="'+x+'" data-y="'+y+'" aria-label="('+x+","+y+')"></button>'}ph+="<span></span>";for(x=0;x<7;x++)ph+="<span>"+x+"</span>";pg.innerHTML=ph;
 pg.onclick=function(e){var b=e.target.closest("button");if(b){b.classList.toggle("on");b.classList.remove("hit","miss")}};
 document.getElementById("q1gc").onclick=function(){var ex=last8.map(function(p){return p[0]+","+p[1]}),good=0,bad=0,on=[];pg.querySelectorAll("button").forEach(function(b){var k=b.dataset.x+","+b.dataset.y,w=ex.indexOf(k)>-1,o=b.classList.contains("on");b.classList.remove("hit","miss");if(o&&w){good++;b.classList.add("hit")}else if(o){bad++;b.classList.add("miss")}else if(w){b.classList.add("miss")}});document.getElementById("q1gm").textContent="صح: "+good+" من "+ex.length+(bad?" • زيادة غلط: "+bad:"")+" (الأخضر صح، الأحمر غلط أو ناقص)"};
-var D=[["1. Scan conversion","Converting geometric data described in vector form into a set of pixels."],["2. Geometric primitives","The low-level (atomic) objects the system can display: points, line segments, polygons, pixels, text, curves and surfaces."],["3. Triangulation","Dividing a polygon into a set of triangles using its vertices."],["4. Standard position","Object axes parallel to the X and Y axes, in default position/orientation before any transformation (translation, rotation, scaling)."]],dh="";
-D.forEach(function(d,i){dh+='<p class="en"><b>'+d[0]+'</b></p><textarea></textarea><button class="btn g" data-a="'+i+'">اعرض الإجابة</button><div class="ans en" id="a'+i+'">'+d[1]+"</div>"});
-document.getElementById("q2").innerHTML=dh;document.getElementById("q2").onclick=function(e){var b=e.target.closest("[data-a]");if(b)document.getElementById("a"+b.dataset.a).classList.toggle("show")};
 mk(document.getElementById("e3"),M,document.getElementById("e3s"));
 
 var TT=3600,left=TT,iv=null,$=function(i){return document.getElementById(i)};
@@ -498,7 +485,7 @@ function stopT(){if(iv){clearInterval(iv);iv=null}}
 $("tgo").onclick=function(){if(iv){stopT();this.textContent="▶ كمّل";$("tst").textContent="الوقت واقف مؤقتًا."}else{if(left<=0)return;iv=setInterval(function(){left--;rt();if(left===600)$("tst").textContent="باقي 10 دقايق، ركّز!";if(left===300)$("tst").textContent="باقي 5 دقايق!";if(left<=0){stopT();$("tst").textContent="الوقت خلص. اضغط سلّم وصحح.";$("tgo").textContent="▶ ابدأ"}},1000);this.textContent="⏸ إيقاف";$("tst").textContent="الوقت شغال. بالتوفيق!"}};
 $("trs").onclick=function(){stopT();left=TT;rt();$("tgo").textContent="▶ ابدأ";$("tst").textContent="جاهز. اضغط ابدأ أول ما تبدأ تحل.";$("fin").textContent=""};
 $("tsub").onclick=function(){stopT();var used=TT-left;$("tgo").textContent="▶ ابدأ";$("q1c").click();$("q1gc").click();var d=document.querySelectorAll("#e3 .q.done").length,w=document.querySelectorAll("#e3 .opt.no").length;
- $("fin").textContent="اتصحح: اختيارات "+(d-w)+" / 10"+(d<10?" (فاضل "+(10-d)+" بدون إجابة)":"")+" • الوقت المستخدم "+Math.floor(used/60)+" دقيقة. راجع الجدول والرسم فوق، وقارن تعريفاتك بالنموذجية.";$("tst").textContent="تم التسليم.";$("fin").scrollIntoView({behavior:"smooth",block:"center"})};
+ $("fin").textContent="اتصحح: اختيارات "+(d-w)+" / "+M.length+(d<M.length?" (فاضل "+(M.length-d)+" بدون إجابة)":"")+" • الوقت المستخدم "+Math.floor(used/60)+" دقيقة. راجع الجدول والرسم فوق، .";$("tst").textContent="تم التسليم.";$("fin").scrollIntoView({behavior:"smooth",block:"center"})};
 function qz(id,list,title){var el=$(id);el.innerHTML="<h3>"+title+'</h3><div class="score"></div> <button class="btn g">إعادة</button><div class="qb"></div>';var sc=el.querySelector(".score"),qb=el.querySelector(".qb");function go(){mk(qb,list,sc)}el.querySelector("button").onclick=go;go()}
 var sel=[];[1,2,3,4].forEach(function(c){var l=QB.filter(function(q){return q[0]===c});qz("qz"+c,l,"اختبر نفسك على محاضرة "+c+" ("+l.length+" سؤال)");sel.push(l[1],l[4])});
 qz("qz0",sel,"كويز سريع على المحاضرات (8 أسئلة)");
