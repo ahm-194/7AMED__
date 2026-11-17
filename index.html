@@ -348,7 +348,7 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 </section>
 
 <section id="s2">
-<h2>حل ميد 2026 بنفسك <span class="pill">15 درجة</span></h2>
+<h2>حل ميد 2026 بنفسك <span class="pill">11 درجة</span></h2>
 <div class="tbar" id="tbar"><div class="tl"><span id="tm">60:00</span><span id="tst" class="sub">جاهز. اضغط ابدأ أول ما تبدأ تحل.</span>
 <span><button class="btn" id="tgo">▶ ابدأ</button> <button class="btn g" id="trs">↺ من الأول</button> <button class="btn g" id="tsub">✔ سلّم وصحح</button></span></div><div class="prog"><div id="tfill"></div></div></div>
 <p>حل الأول وبعدين <b>تحقق</b> لكل سؤال، أو <b>سلّم وصحح</b> علشان تصحح الكل مرة واحدة. الحل النموذجي في آخر الصفحة.</p>
@@ -360,10 +360,9 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <p class="en"><b>(2)</b> ارسم: اضغط على الخانات اللي هتلونها.</p>
 <div class="pg" id="q1g"></div>
 <button class="btn" id="q1gc">تحقق من الرسم</button><div class="msg" id="q1gm"></div></div>
-<div class="card"><h3>Q2 — عرّف (4 درجات)</h3><div id="q2"></div></div>
-<div class="card"><h3>Q3 — اختار الإجابة الصحيحة (5 درجات)</h3><div class="score" id="e3s"></div><div id="e3"></div></div>
+<div class="card"><h3>Q2 — اختار الإجابة الصحيحة (5 درجات)</h3><div class="score" id="e3s"></div><div id="e3"></div></div>
 <div class="msg" id="fin"></div>
-<details><summary>الحل النموذجي كامل (Q1 + Q2 + Q3)</summary><div>
+<details><summary>الحل النموذجي كامل (Q1 + Q2)</summary><div>
 <h3>Q1</h3>
 <div class="wrap"><table><tr><th>k</th><th>p<sub>k</sub></th><th>(x<sub>k+1</sub>, y<sub>k+1</sub>)</th><th>2x<sub>k+1</sub></th><th>2y<sub>k+1</sub></th></tr>
 <tr><td>0</td><td>−7</td><td>(1,8)</td><td>2</td><td>16</td></tr><tr><td>1</td><td>−4</td><td>(2,8)</td><td>4</td><td>16</td></tr>
@@ -372,13 +371,8 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <p>الدكتور حط (6,5) كصف أخير (x&gt;y فبيوقف). نقاط الـ octant: <b>(0,8) (1,8) (2,8) (3,7) (4,7) (5,6)</b>.</p>
 <canvas id="cv8" width="360" height="300" aria-label="رسم الـ octant لـ r=8"></canvas>
 <h3>Q2</h3>
-<ul class="en"><li><b>Scan conversion:</b> converting geometric data described in vector form into a set of pixels.</li>
-<li><b>Geometric primitives:</b> the low-level objects (atomic entities) the system can display: points, line segments, polygons, pixels, text, curves and surfaces.</li>
-<li><b>Triangulation:</b> dividing a polygon into a set of triangles using its vertices.</li>
-<li><b>Standard position:</b> object axes parallel to the X and Y axes, in default position/orientation before any transformation.</li></ul>
-<h3>Q3</h3>
-<div class="wrap"><table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
-<tr><td>c</td><td>b</td><td>a</td><td>b</td><td>b</td><td>a</td><td>c</td><td>d</td><td>c</td><td>d</td></tr></table></div></div></details>
+<div class="wrap"><table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+<tr><td>c</td><td>b</td><td>a</td><td>b</td><td>b</td><td>c</td><td>c</td><td>d</td></tr>
 </section>
 
 <section id="s3">
@@ -483,9 +477,6 @@ document.getElementById("q1s").onclick=function(){t1.querySelectorAll("input").f
 var pg=document.getElementById("q1g"),ph="";for(var y=8;y>=3;y--){ph+="<span>"+y+"</span>";for(var x=0;x<7;x++)ph+='<button data-x="'+x+'" data-y="'+y+'" aria-label="('+x+","+y+')"></button>'}ph+="<span></span>";for(x=0;x<7;x++)ph+="<span>"+x+"</span>";pg.innerHTML=ph;
 pg.onclick=function(e){var b=e.target.closest("button");if(b){b.classList.toggle("on");b.classList.remove("hit","miss")}};
 document.getElementById("q1gc").onclick=function(){var ex=last8.map(function(p){return p[0]+","+p[1]}),good=0,bad=0,on=[];pg.querySelectorAll("button").forEach(function(b){var k=b.dataset.x+","+b.dataset.y,w=ex.indexOf(k)>-1,o=b.classList.contains("on");b.classList.remove("hit","miss");if(o&&w){good++;b.classList.add("hit")}else if(o){bad++;b.classList.add("miss")}else if(w){b.classList.add("miss")}});document.getElementById("q1gm").textContent="صح: "+good+" من "+ex.length+(bad?" • زيادة غلط: "+bad:"")+" (الأخضر صح، الأحمر غلط أو ناقص)"};
-var D=[["1. Scan conversion","Converting geometric data described in vector form into a set of pixels."],["2. Geometric primitives","The low-level (atomic) objects the system can display: points, line segments, polygons, pixels, text, curves and surfaces."],["3. Triangulation","Dividing a polygon into a set of triangles using its vertices."],["4. Standard position","Object axes parallel to the X and Y axes, in default position/orientation before any transformation (translation, rotation, scaling)."]],dh="";
-D.forEach(function(d,i){dh+='<p class="en"><b>'+d[0]+'</b></p><textarea></textarea><button class="btn g" data-a="'+i+'">اعرض الإجابة</button><div class="ans en" id="a'+i+'">'+d[1]+"</div>"});
-document.getElementById("q2").innerHTML=dh;document.getElementById("q2").onclick=function(e){var b=e.target.closest("[data-a]");if(b)document.getElementById("a"+b.dataset.a).classList.toggle("show")};
 mk(document.getElementById("e3"),M,document.getElementById("e3s"));
 
 var TT=3600,left=TT,iv=null,$=function(i){return document.getElementById(i)};
@@ -494,7 +485,7 @@ function stopT(){if(iv){clearInterval(iv);iv=null}}
 $("tgo").onclick=function(){if(iv){stopT();this.textContent="▶ كمّل";$("tst").textContent="الوقت واقف مؤقتًا."}else{if(left<=0)return;iv=setInterval(function(){left--;rt();if(left===600)$("tst").textContent="باقي 10 دقايق، ركّز!";if(left===300)$("tst").textContent="باقي 5 دقايق!";if(left<=0){stopT();$("tst").textContent="الوقت خلص. اضغط سلّم وصحح.";$("tgo").textContent="▶ ابدأ"}},1000);this.textContent="⏸ إيقاف";$("tst").textContent="الوقت شغال. بالتوفيق!"}};
 $("trs").onclick=function(){stopT();left=TT;rt();$("tgo").textContent="▶ ابدأ";$("tst").textContent="جاهز. اضغط ابدأ أول ما تبدأ تحل.";$("fin").textContent=""};
 $("tsub").onclick=function(){stopT();var used=TT-left;$("tgo").textContent="▶ ابدأ";$("q1c").click();$("q1gc").click();var d=document.querySelectorAll("#e3 .q.done").length,w=document.querySelectorAll("#e3 .opt.no").length;
- $("fin").textContent="اتصحح: اختيارات "+(d-w)+" / 10"+(d<10?" (فاضل "+(10-d)+" بدون إجابة)":"")+" • الوقت المستخدم "+Math.floor(used/60)+" دقيقة. راجع الجدول والرسم فوق، وقارن تعريفاتك بالنموذجية.";$("tst").textContent="تم التسليم.";$("fin").scrollIntoView({behavior:"smooth",block:"center"})};
+$("fin").textContent="اتصحح: اختيارات "+(d-w)+" / "+M.length+(d<M.length?" (فاضل "+(M.length-d)+" بدون إجابة)":"")+" • الوقت المستخدم "+Math.floor(used/60)+" دقيقة. راجع الجدول والرسم فوق.";$("tst").textContent="تم التسليم.";$("fin").scrollIntoView({behavior:"smooth",block:"center"})};
 function qz(id,list,title){var el=$(id);el.innerHTML="<h3>"+title+'</h3><div class="score"></div> <button class="btn g">إعادة</button><div class="qb"></div>';var sc=el.querySelector(".score"),qb=el.querySelector(".qb");function go(){mk(qb,list,sc)}el.querySelector("button").onclick=go;go()}
 var sel=[];[1,2,3,4].forEach(function(c){var l=QB.filter(function(q){return q[0]===c});qz("qz"+c,l,"اختبر نفسك على محاضرة "+c+" ("+l.length+" سؤال)");sel.push(l[1],l[4])});
 qz("qz0",sel,"كويز سريع على المحاضرات (8 أسئلة)");
