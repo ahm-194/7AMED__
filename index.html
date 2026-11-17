@@ -110,7 +110,6 @@ textarea{width:100%;min-height:64px;font:inherit;padding:8px;border:1px solid va
 <li>r=10: (0,10) (1,10) (2,10) (3,10) (4,9) (5,9) (6,8) (7,7) • r=8: (0,8) (1,8) (2,8) (3,7) (4,7) (5,6) • r=5: (0,5) (1,5) (2,5) (3,4).</li></ul></div>
 
 <div class="wrap"><table class="en"><tr><th>Topic</th><th>Formula</th></tr>
-<tr><td>Colors</td><td class="m">2^bits</td></tr><tr><td>Frame buffer</td><td class="m">w × h × bits ÷ 8</td></tr>
 <tr><td>Line p0 / p&lt;0 / p≥0</td><td class="m">2Δy−Δx ; +2Δy ; +2Δy−2Δx</td></tr>
 <tr><td>Circle p0 / p&lt;0 / p≥0</td><td class="m">1−r ; +2x+1 ; +2x+1−2y</td></tr></table></div>
 <div class="tip"><b>تكتيكات الحل:</b> اكتب الثوابت أول حاجة، املا الجدول صف صف، آخر نقطة في الخط = نقطة النهاية، والدايرة وقف عند x≥y. أخطاء شائعة: Bresenham مش floating-point • الـ jaggies في low resolution • octant مش quadrant • RGB additive.</div>
